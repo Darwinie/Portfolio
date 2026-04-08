@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Scroll animation base */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tech marquee base */
+.tech-marquee {
+  padding: 2rem 0;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.tech-item {
+  padding: 0.5rem 1.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.tech-item:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.testimonial-quote {
+  margin-bottom: 1.5rem;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary);
+  opacity: 0.3;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-quote p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--white);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info strong {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.author-info span {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Project filters */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background: var(--gradient);
+  color: var(--white);
+  border-color: transparent;
+}
+
+/* Project transitions */
+.project-enter-active,
+.project-leave-active {
+  transition: all 0.4s ease;
+}
+
+.project-enter-from,
+.project-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.project-move {
+  transition: transform 0.4s ease;
+}
+
+/* Project impact badge */
+.project-impact {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.impact-badge {
+  padding: 0.375rem 0.75rem;
+  background: rgba(16, 185, 129, 0.9);
+  color: var(--white);
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+/* Typing animation */
+.typing-container {
+  display: inline-block;
+}
+
+.typed-text {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--primary);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: float-up linear infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Theme toggle */
+.theme-toggle {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.theme-icon {
+  font-size: 1.25rem;
+}
+
+/* Navbar scrolled */
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: var(--shadow);
+}
+
+/* Skill proficiency */
+.skill-proficiency {
+  margin-top: 1.5rem;
+}
+
+.proficiency-bar {
+  height: 8px;
+  background: var(--bg-primary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.proficiency-fill {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  transition: width 1s ease;
+}
+
+.proficiency-text {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Button outline */
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* Button icon */
+.btn-icon {
+  font-size: 1.125rem;
+}
+
+/* Stat suffix */
+.stat-suffix {
+  font-size: inherit;
+}
