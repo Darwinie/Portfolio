@@ -1,0 +1,29 @@
+:root {
+  --paper: #F4F0E7;
+  --paper-deep: #EAE4D7;
+  --ink: #171512;
+  --ink-soft: #3A3630;
+  --muted: #6D675C;
+  --line: #D5CDBE;
+  --accent: #B4431D;
+  --accent-soft: #F0DED2;
+  --code-bg: #1C1A17;
+  --code-text: #EDE7DB;
+
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --container: 1240px;
+  --gutter: 24px;
+  --section-space: clamp(4.5rem, 9vw, 8rem);
+  --radius: 2px;
+  --motion-fast: 160ms;
+  --motion-base: 240ms;
+  --motion-slow: 600ms;
+
+  --header-height: 4.5rem;
+  --measure: 65ch;
+  --ink-rule: 1px solid var(--ink);
+  --line-rule: 1px solid var(--line);
+}

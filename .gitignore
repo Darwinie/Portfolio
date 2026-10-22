@@ -1,2 +1,7 @@
 node_modules
 dist
+private-assets/
+test-results/
+playwright-report/
+.superpowers/
+.netlify/

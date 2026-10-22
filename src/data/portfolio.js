@@ -1,195 +1,160 @@
-export const portfolioData = {
-  personal: {
+export const portfolio = {
+  profile: {
     name: 'Darwin M. Lubugan',
-    initials: 'DL',
-    title: 'Software Engineer',
-    greeting: 'Hello, I\'m',
-    description: `Software Engineer with strong C#, .NET, and Vue.js background, expanding into automation, API integration, and system administration. Proficient in PowerShell, Python, and PHP for developing automation workflows and internal systems.`,
-    typingTitles: ['Software Engineer', 'Automation Expert', 'System Administrator', 'API Integrator']
-  },
-  stats: [
-    { number: '70', suffix: '%', label: 'Task Reduction' },
-    { number: '2', suffix: '+', label: 'Years Experience' },
-    { number: '3', suffix: '', label: 'Major Projects' }
-  ],
-  about: {
-    title: 'A Passionate Developer',
-    bio: `I'm a software engineer based in Malaruhatan, Lian, Batangas with a strong foundation in Microsoft technologies. I have experience developing automation workflows, API integrations, and internal systems that streamline business operations.`,
-    secondaryBio: `I believe in continuous learning and staying up-to-date with the latest technologies including AI-assisted development tools to accelerate coding and debugging. When I'm not coding, I'm exploring new ways to automate repetitive tasks and improve system efficiency.`,
-    highlights: [
-      { icon: '📍', label: 'Location', value: 'Malaruhatan, Lian, Batangas' },
-      { icon: '🎓', label: 'Education', value: 'BSIT - Cum Laude' },
-      { icon: '💼', label: 'Company', value: 'Advani Group of Companies' },
-      { icon: '🌐', label: 'Email', value: 'lubugandarwin@gmail.com' }
+    role: 'Software Engineer — Automation',
+    location: 'Batangas, Philippines',
+    timezone: 'GMT+8',
+    email: 'lubugandarwin@gmail.com',
+    phone: '+639280810360',
+    availability: 'Open to software engineering and automation roles — Remote-friendly',
+    headline: 'I turn repetitive work into reliable systems.',
+    intro: 'I build internal tools and automations for business operations — C#, .NET, Vue, PowerShell, Python, SQL. Currently keeping business systems running at Advani Group of Companies.',
+    portraitAlt: 'Darwin M. Lubugan',
+    resumeUrl: '/Lubugan_Darwin_Resume.pdf',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/Darwinie' },
+      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/lubugandarwin05' },
+      { label: 'Email', url: 'mailto:lubugandarwin@gmail.com' }
     ]
   },
-  skills: [
+  metrics: [
+    { value: '≈70%', label: 'Less repetitive work', detail: 'Approximate reduction across automation work' },
+    { value: 'Weeks → < 1 hour', label: 'Catalog cleanup', detail: 'Manual reconciliation replaced by scripts' },
+    { value: 'Since 2023', label: 'Building internal tools', detail: 'Software engineering and automation roles' }
+  ],
+  caseStudies: [
     {
-      icon: '💻',
-      title: 'Microsoft Stack',
-      description: 'Building robust applications using C#, .NET Core, ASP.NET Core MVC & Web API, Entity Framework Core, and LINQ.',
-      tags: ['C#', '.NET Core', 'ASP.NET Core', 'Entity Framework', 'LINQ'],
-      proficiency: 90
+      number: '01',
+      slug: 'shopify-catalog-automation',
+      title: 'Shopify catalog automation',
+      outcome: 'A multi-week catalog cleanup, reduced to under an hour.',
+      context: 'Product data across stores was inconsistent, duplicated, and slow to reconcile. Barcode generation was manual.',
+      constraint: 'No third-party licensing. The process had to fit the existing store operation without adding a new platform.',
+      built: 'A set of PowerShell and Python scripts that align product data, remove duplicates, and generate barcodes through the Shopify API.',
+      result: 'Repeatable catalog cleanup in under an hour instead of weeks of manual work.',
+      role: 'Automation engineer',
+      stack: ['PowerShell', 'Python', 'Shopify API'],
+      scope: 'Product data, deduplication, barcode generation',
+      visual: { type: 'pipeline', steps: ['Catalog data', 'Dedupe + align', 'Barcodes + Shopify'] },
+      link: null
     },
     {
-      icon: '🌐',
-      title: 'Web Development',
-      description: 'Creating responsive web applications and internal tools using modern JavaScript frameworks and PHP.',
-      tags: ['Vue.js', 'PHP', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
-      proficiency: 85
+      number: '02',
+      slug: 'timekeeping-system',
+      title: 'Timekeeping, rebuilt in-house',
+      outcome: 'Replaced a licensed timesheet system with a custom PHP/MySQL app.',
+      context: 'Timesheets were manual, and the existing third-party system carried recurring licensing fees.',
+      constraint: 'The replacement had to cover daily timekeeping, records, and reporting without disrupting payroll operations.',
+      built: 'An internal timekeeping system with a PHP/MySQL backend and a Vue.js front end.',
+      result: 'Eliminated licensing fees and manual timesheet handling.',
+      role: 'Full-stack developer',
+      stack: ['PHP', 'MySQL', 'Vue.js'],
+      scope: 'Timekeeping, records, reporting',
+      visual: {
+        type: 'image',
+        src: '/assets/projects/timekeeping-redacted.jpg',
+        alt: 'Timekeeping dashboard showing attendance and payroll summaries'
+      },
+      link: null
     },
     {
-      icon: '☁️',
-      title: 'Cloud & DevOps',
-      description: 'Deploying and managing applications on Microsoft Azure with CI/CD pipelines and Azure Functions.',
-      tags: ['Microsoft Azure', 'Azure Functions', 'Azure DevOps', 'CI/CD', 'Docker'],
-      proficiency: 75
-    },
-    {
-      icon: '🤖',
-      title: 'Automation & AI',
-      description: 'Developing automation scripts and integrating OCR solutions for streamlined business processes.',
-      tags: ['PowerShell', 'Python', 'Azure OCR', 'AI Tools', 'Claude Code'],
-      proficiency: 88
-    },
-    {
-      icon: '🗄️',
-      title: 'Database Management',
-      description: 'Managing and designing databases using SQL Server, T-SQL, and MongoDB for efficient data storage.',
-      tags: ['SQL Server', 'T-SQL', 'MongoDB', 'Stored Procedures'],
-      proficiency: 82
-    },
-    {
-      icon: '🔧',
-      title: 'ERP & Support',
-      description: 'Providing application support for Dynamics 365 Business Central and system troubleshooting.',
-      tags: ['Dynamics 365 BC', 'SAP Business One', 'Network Admin', 'System Troubleshooting'],
-      proficiency: 78
+      number: '03',
+      slug: 'ocr-customer-identification',
+      title: 'OCR at the counter',
+      outcome: 'Customer identification ≈70% faster, with no manual typing.',
+      context: 'Manual customer identification created queues and typing errors at the counter.',
+      constraint: 'The integration had to prefill the existing workflow without replacing the systems staff already used.',
+      built: 'An Azure OCR integration with a Vue.js and C# workflow that reads customer information and prefills the record.',
+      result: '≈70% faster processing and less manual data entry.',
+      role: 'Software engineer',
+      stack: ['Azure OCR', 'Vue.js', 'C#'],
+      scope: 'Customer identification, data entry',
+      visual: { type: 'pipeline', steps: ['Capture ID', 'OCR extract', 'Prefill workflow'] },
+      link: null
     }
   ],
-  projects: [
+  additionalWork: [
     {
-      title: 'Shopify Image Resizer with API Tester',
-      description: 'Built an image resizing tool specifically for Shopify product uploads, integrated with Shopify API. Includes an API credential tester to validate Shopify access tokens and store connectivity before performing image operations, ensuring reliable integration.',
-      tags: ['Python', 'Shopify API', 'PIL/Pillow', 'REST API'],
-      image: '/assets/projects/shopify-image-resizer.png',
-      impact: 'Saves 5+ hrs/week',
-      demoUrl: '#',
-      codeUrl: '#'
+      title: 'Shopify image resizer with API tester',
+      description: 'Tool for resizing Shopify product images and validating store credentials.',
+      stack: ['Python', 'Shopify API', 'Pillow']
     },
     {
-      title: 'Timekeeping System',
-      description: 'A PHP and MySQL timekeeping system developed to fully replace Sprout, eliminating manual timesheets and reducing operational costs by removing third-party licensing fees.',
-      tags: ['PHP', 'MySQL', 'Vue.js'],
-      image: '/assets/projects/timekeeping-system.png',
-      impact: 'Eliminates licensing fees',
-      demoUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      title: 'Shopify Automation Scripts',
-      description: 'PowerShell and Python scripts for Shopify product data alignment, deduplication, and barcode generation - reducing a multi-week manual process to under one hour.',
-      tags: ['PowerShell', 'Python', 'Shopify API'],
-      image: '/assets/projects/shopify-automation.png',
-      impact: 'Weeks → < 1 hour',
-      demoUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      title: 'OCR Integration System',
-      description: 'Integrated OCR for faster customer identification, reducing queue times and eliminating manual data entry with real-time accuracy.',
-      tags: ['Azure OCR', 'Vue.js', 'C#'],
-      image: '/assets/projects/ocr-integration.png',
-      impact: '70% faster processing',
-      demoUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      title: 'MHO Information System',
-      description: 'Capstone project: Digitized and automated manual record-keeping processes, eliminating paper-based logs and reducing data retrieval time.',
-      tags: ['C#', '.NET', 'SQL Server'],
-      image: '/assets/projects/mho-system.png',
-      impact: '100% paperless',
-      demoUrl: '#',
-      codeUrl: '#'
+      title: 'Municipal Health Office information system',
+      description: 'Capstone project that digitized paper-based health records.',
+      stack: ['C#', '.NET', 'SQL Server']
     }
   ],
+  about: {
+    bio: [
+      "I'm Darwin, a software engineer based in Batangas, Philippines. I build internal tools and automations for business operations — the kind of work that removes a manual step, a spreadsheet, or a licensing fee.",
+      "I've worked across the Microsoft stack, PHP/MySQL systems, and Shopify automation. At Advani Group of Companies, I build internal tools while supporting users, Active Directory access, Hyper-V and Proxmox environments, backups, and business applications."
+    ],
+    howIWork: [
+      { number: '01', title: 'Observe the process', description: 'Watch how the work actually gets done, including the workarounds.' },
+      { number: '02', title: 'Find the constraint', description: 'Identify the step that creates the delay, duplicate, or manual cost.' },
+      { number: '03', title: 'Build the smallest reliable system', description: 'Ship the smallest tool that removes the constraint and can be maintained.' },
+      { number: '04', title: 'Measure and document it', description: 'Confirm the outcome and leave the team with a process they can run.' }
+    ],
+    toolbox: [
+      { group: 'Build', items: ['C#', '.NET', 'ASP.NET Core', 'Vue.js', 'PHP'] },
+      { group: 'Automate', items: ['PowerShell', 'Python', 'Shopify API', 'Azure OCR'] },
+      { group: 'Data', items: ['SQL Server', 'T-SQL', 'MySQL', 'MongoDB'] },
+      { group: 'Support', items: ['Windows / macOS', 'Active Directory', 'Hardware / software', 'End-user assistance'] },
+      { group: 'Systems', items: ['Hyper-V', 'Proxmox', 'Linux', 'pfSense', 'DNS / DHCP / VPN'] },
+      { group: 'Operate', items: ['Dynamics 365 Business Central', 'SAP Business One', 'Azure DevOps', 'Git', 'CI/CD', 'Docker'] }
+    ],
+    currently: [
+      { label: 'Role', value: 'Junior Network and System Administrator' },
+      { label: 'Company', value: 'Advani Group of Companies' },
+      { label: 'Focus', value: 'Automation, application support, and IT operations' },
+      { label: 'Education', value: 'BSIT, Cum Laude — STI College Balayan' }
+    ]
+  },
   experience: [
     {
-      title: 'Junior Network and System Administrator',
-      company: 'Advani Group of Companies',
-      period: 'Nov 2025 - Present',
-      description: 'Troubleshoot network and system issues to ensure high availability, security, and performance. Provide application support for Dynamics 365 Business Central.',
+      role: 'Junior Network and System Administrator',
+      company: 'Advani Group of Companies (Nyne Beauty Inc.)',
+      period: 'Nov 2025 — Present',
+      summary: 'Build internal tools and automations while supporting users, infrastructure, and business-critical applications. Partner with teams to identify automation opportunities and reduce repetitive work.',
       highlights: [
-        'Developed PowerShell and Python scripts to automate Shopify product data alignment, deduplication, and barcode generation - reducing multi-week manual process to under one hour',
-        'Developed PHP and MySQL timekeeping system to replace Sprout, eliminating manual timesheets and reducing operational costs',
-        'Used Whisper AI + Python to convert speech-to-text from Dynamics 365 training sessions, then applied AI to transform raw transcripts into structured, professional documentation — accelerating knowledge capture and reducing manual writing effort',
-        'Reduced repetitive tasks by approximately 70% through automation opportunities',
-        'Provide application support for Dynamics 365 Business Central, resolving user-reported issues',
-        'Provide application support for Point of Sale system, resolving user-reported issues'
+        'Troubleshoot Windows / macOS, network, and system issues; provide hardware and software support, installation, and end-user assistance.',
+        'Administer Active Directory user access, maintain servers and Linux environments, and support Hyper-V and Proxmox virtualization.',
+        'Perform routine backups, maintain IT asset records, and support equipment inventory tracking.',
+        'Provide Dynamics 365 Business Central application support and track issues in Azure DevOps; built a C#/.NET ticketing system for internal requests.',
+        'Built a Python automation for pfSense backups and PowerShell/Python workflows for Shopify catalog alignment, deduplication, and barcode generation, reducing a multi-week process to under an hour.',
+        'Built a PHP/MySQL timekeeping system that replaced a licensed tool, reducing manual processing and improving payroll accuracy.',
+        'Used Whisper AI and Python to convert training transcripts into structured documentation.'
       ]
     },
     {
-      title: 'Software Engineer',
+      role: 'Software Engineer',
       company: 'Elyon Global Technologies Asia Inc.',
-      period: 'Oct 2023 - Oct 2025',
-      description: 'Developed automation features and responsive web solutions for internal projects and client needs.',
+      period: 'Oct 2023 — Oct 2025',
+      summary: 'Built automation features and responsive web solutions for internal and client projects.',
       highlights: [
-        'Integrated OCR for faster customer identification, reducing queue times and eliminating manual data entry',
-        'Developed responsive landing pages and internal tools using Vue.js',
-        'Created reusable components for consistent UI and faster development',
-        'Delivered scalable solutions to handle high transaction volumes with real-time accuracy'
+        'Integrated OCR for customer identification, reducing queue times and manual data entry.',
+        'Developed responsive landing pages and internal tools with Vue.js.',
+        'Created reusable components for consistent UI and faster delivery.'
       ]
     }
   ],
   education: {
+    degree: 'BSIT, Cum Laude',
     school: 'STI College Balayan',
-    degree: 'Bachelor of Science in Information Technology',
-    period: '2019 - 2023',
-    honors: 'Cum Laude',
-    capstone: 'Municipal Health Office Information and Record Management System'
+    period: '2019 — 2023'
   },
   certifications: [
-    { name: 'SAP Business One (Basic - Financials and Logistics)' },
-    { name: 'SAP Business One (Advanced - Implementation and Support)' },
+    { name: 'SAP Business One (Basic — Financials and Logistics)' },
+    { name: 'SAP Business One (Advanced — Implementation and Support)' },
     { name: 'Tech Talks: AI and Agents' },
     { name: 'Lean Six Sigma Yellow Belt' },
     { name: 'Lean Six Sigma White Belt' }
   ],
-  testimonials: [
-    {
-      quote: "Darwin's automation scripts saved our team countless hours. His ability to identify inefficiencies and implement solutions is remarkable.",
-      author: "Manager",
-      role: "Advani Group of Companies",
-      initials: "AG"
-    },
-    {
-      quote: "A dedicated developer who consistently delivers high-quality work. His OCR integration project was a game-changer for our customer service.",
-      author: "Team Lead",
-      role: "Elyon Global Technologies",
-      initials: "EG"
-    }
-  ],
   contact: {
-    title: 'Let\'s Connect',
-    description: `I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!`,
-    methods: [
-      { icon: '📧', label: 'Email', value: 'lubugandarwin@gmail.com' },
-      { icon: '📱', label: 'Phone', value: '+639280810360' },
-      { icon: '📍', label: 'Location', value: 'Malaruhatan, Lian, Batangas' }
-    ]
-  },
-  social: [
-    { name: 'GitHub', initials: 'GH', url: 'https://github.com/Darwinie', icon: 'github' },
-    { name: 'LinkedIn', initials: 'IN', url: 'https://www.linkedin.com/in/lubugandarwin05', icon: 'linkedin' },
-    { name: 'Facebook', initials: 'FB', url: 'https://facebook.com/darwinlubugan', icon: 'facebook' }
-  ],
-  navLinks: [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Certificates', href: '#certificates' },
-    { label: 'Contact', href: '#contact' }
-  ]
+    headline: 'Have a process that needs to disappear?',
+    email: 'lubugandarwin@gmail.com',
+    location: 'Batangas, Philippines',
+    timezone: 'GMT+8'
+  }
 }

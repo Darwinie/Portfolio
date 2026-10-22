@@ -1,30 +1,32 @@
 <template>
   <div class="app">
-    <TheNavbar />
-    <HeroSection />
-    <TechStackMarquee />
-    <AboutSection />
-    <SkillsSection />
-    <ProjectsSection />
-    <ExperienceSection />
-    <CertificatesSection />
-    <TestimonialsSection />
-    <ContactSection />
-    <TheFooter />
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+
+    <main id="main">
+      <HeroSection />
+      <WorkSection data-reveal />
+      <AboutSection data-reveal />
+      <ExperienceSection data-reveal />
+      <CertificationsSection data-reveal />
+      <ContactSection data-reveal />
+    </main>
+
+    <SiteFooter />
   </div>
 </template>
 
 <script setup>
-import { TheNavbar, TheFooter } from '@/components/layout'
+import { SiteFooter, SiteHeader } from '@/components/layout'
 import {
-  HeroSection,
   AboutSection,
-  SkillsSection,
-  ProjectsSection,
+  CertificationsSection,
+  ContactSection,
   ExperienceSection,
-  CertificatesSection,
-  TestimonialsSection,
-  ContactSection
+  HeroSection,
+  WorkSection
 } from '@/components/sections'
-import TechStackMarquee from '@/components/TechStackMarquee.vue'
+import { useReveal } from '@/composables/useReveal'
+
+useReveal()
 </script>

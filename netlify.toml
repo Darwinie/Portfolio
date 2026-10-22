@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "http://lubugandarwin.netlify.app/*"
+  to = "https://darwinlubugan.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lubugandarwin.netlify.app/*"
+  to = "https://darwinlubugan.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.darwinlubugan.dev/*"
+  to = "https://darwinlubugan.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.darwinlubugan.dev/*"
+  to = "https://darwinlubugan.dev/:splat"
+  status = 301
+  force = true
