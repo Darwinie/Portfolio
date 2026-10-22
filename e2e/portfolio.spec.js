@@ -51,14 +51,14 @@ test('resume and visual assets resolve', async ({ page, request }) => {
 test('search discovery files resolve', async ({ page, request }) => {
   const robots = await request.get('/robots.txt')
   expect(robots.status()).toBe(200)
-  expect(await robots.text()).toContain('Sitemap: https://darwinlubugan.dev/sitemap.xml')
+  expect(await robots.text()).toContain('Sitemap: https://lubugandarwin.netlify.app/sitemap.xml')
 
   const sitemap = await request.get('/sitemap.xml')
   expect(sitemap.status()).toBe(200)
-  expect(await sitemap.text()).toContain('<loc>https://darwinlubugan.dev/</loc>')
+  expect(await sitemap.text()).toContain('<loc>https://lubugandarwin.netlify.app/</loc>')
 
   await page.goto('/')
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://darwinlubugan.dev/')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://lubugandarwin.netlify.app/')
   const person = await page.locator('script[type="application/ld+json"]').textContent()
   expect(JSON.parse(person)).toMatchObject({
     '@type': 'Person',

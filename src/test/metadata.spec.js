@@ -12,18 +12,17 @@ describe('document metadata', () => {
   })
 
   it('has canonical, Open Graph, and Twitter metadata', () => {
-    expect(html).toContain('rel="canonical" href="https://darwinlubugan.dev/"')
-    expect(html).toContain('property="og:image" content="https://darwinlubugan.dev/og-image.png"')
+    expect(html).toContain('rel="canonical" href="https://lubugandarwin.netlify.app/"')
+    expect(html).toContain('property="og:image" content="https://lubugandarwin.netlify.app/og-image.png"')
     expect(html).toContain('name="twitter:card" content="summary_large_image"')
     expect(html).toContain('name="robots" content="index, follow"')
-    expect(html).not.toContain('netlify.app')
   })
 
   it('has Person structured data and no runtime Google Fonts', () => {
     expect(html).toContain('application/ld+json')
     expect(html).toContain('"@type": "Person"')
     expect(html).toContain('"alternateName": "Darwin Lubugan"')
-    expect(html).toContain('"image": "https://darwinlubugan.dev/og-image.png"')
+    expect(html).toContain('"image": "https://lubugandarwin.netlify.app/og-image.png"')
     expect(html).not.toContain('fonts.googleapis.com')
     expect(html).not.toContain('fonts.gstatic.com')
   })
@@ -34,21 +33,19 @@ describe('search engine discovery', () => {
     const robots = readProjectFile('public/robots.txt')
     expect(robots).toContain('User-agent: *')
     expect(robots).toContain('Allow: /')
-    expect(robots).toContain('Sitemap: https://darwinlubugan.dev/sitemap.xml')
+    expect(robots).toContain('Sitemap: https://lubugandarwin.netlify.app/sitemap.xml')
   })
 
   it('lists the canonical homepage in the sitemap', () => {
     const sitemap = readProjectFile('public/sitemap.xml')
-    expect(sitemap).toContain('<loc>https://darwinlubugan.dev/</loc>')
+    expect(sitemap).toContain('<loc>https://lubugandarwin.netlify.app/</loc>')
     expect(sitemap).toContain('<lastmod>2026-10-22</lastmod>')
   })
 
-  it('redirects the Netlify subdomain and www host to the canonical domain', () => {
+  it('publishes the build without redirecting the primary Netlify URL', () => {
     const netlify = readProjectFile('netlify.toml')
     expect(netlify).toContain('publish = "dist"')
-    expect(netlify).toContain('from = "https://lubugandarwin.netlify.app/*"')
-    expect(netlify).toContain('to = "https://darwinlubugan.dev/:splat"')
-    expect(netlify).toContain('from = "https://www.darwinlubugan.dev/*"')
-    expect(netlify).toContain('status = 301')
+    expect(netlify).not.toContain('[[redirects]]')
+    expect(netlify).not.toContain('darwinlubugan.dev')
   })
 })
