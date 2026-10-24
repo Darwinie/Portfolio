@@ -6,7 +6,7 @@ it('renders the positioning headline, actions, portrait, and metrics', () => {
   const wrapper = mount(HeroSection)
 
   expect(wrapper.get('h1').text()).toContain('I turn repetitive work into reliable systems')
-  expect(wrapper.text()).toContain('Software Engineer — Automation')
+  expect(wrapper.text()).toContain('Software Engineer | .NET Full Stack Developer')
   expect(wrapper.text()).toContain('Open to software engineering and automation roles')
   expect(wrapper.get('a[href="#work"]').text()).toContain('See selected work')
   expect(wrapper.get('a[href="/Lubugan_Darwin_Resume.pdf"]').text()).toContain('Download CV')
@@ -14,5 +14,6 @@ it('renders the positioning headline, actions, portrait, and metrics', () => {
   expect(wrapper.text()).toContain('Batangas, Philippines · GMT+8')
   expect(wrapper.text()).toContain('≈70%')
   expect(wrapper.text()).toContain('Weeks → < 1 hour')
+  expect(wrapper.text()).toContain('≈3 years')
   expect(wrapper.findComponent(MetricStrip).exists()).toBe(true)
 })

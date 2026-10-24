@@ -6,7 +6,10 @@ it('renders the primary navigation and resume link', () => {
   expect(wrapper.get('nav').text()).toContain('Work')
   expect(wrapper.get('nav').text()).toContain('About')
   expect(wrapper.get('nav').text()).toContain('Experience')
+  expect(wrapper.get('nav').text()).toContain('AI demo')
+  expect(wrapper.get('nav').text()).toContain('Ask AI')
   expect(wrapper.get('nav').text()).toContain('Contact')
+  expect(wrapper.get('a[href="#assistant"]').text()).toBe('Ask AI')
   expect(wrapper.get('a[href="/Lubugan_Darwin_Resume.pdf"]').exists()).toBe(true)
 })
 

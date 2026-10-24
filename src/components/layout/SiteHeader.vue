@@ -73,11 +73,13 @@ const navItems = [
   { label: 'Work', href: '#work', id: 'work' },
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Experience', href: '#experience', id: 'experience' },
+  { label: 'AI demo', href: '#triage', id: 'triage' },
+  { label: 'Ask AI', href: '#assistant', id: 'assistant' },
   { label: 'Contact', href: '#contact', id: 'contact' }
 ]
 
 const { isOpen, toggle, close } = useMobileMenu()
-const { activeSection } = useScrollSpy(['work', 'about', 'experience', 'contact'])
+const { activeSection } = useScrollSpy(['work', 'about', 'experience', 'triage', 'assistant', 'contact'])
 const isScrolled = ref(false)
 const headerRef = ref(null)
 const menuButton = ref(null)

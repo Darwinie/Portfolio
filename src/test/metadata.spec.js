@@ -39,7 +39,7 @@ describe('search engine discovery', () => {
   it('lists the canonical homepage in the sitemap', () => {
     const sitemap = readProjectFile('public/sitemap.xml')
     expect(sitemap).toContain('<loc>https://lubugandarwin.netlify.app/</loc>')
-    expect(sitemap).toContain('<lastmod>2026-10-22</lastmod>')
+    expect(sitemap).toContain('<lastmod>2026-10-23</lastmod>')
   })
 
   it('publishes the build without redirecting the primary Netlify URL', () => {

@@ -9,21 +9,26 @@
       <AboutSection data-reveal />
       <ExperienceSection data-reveal />
       <CertificationsSection data-reveal />
+      <TicketTriageSection data-reveal />
+      <PortfolioAssistantSection data-reveal />
       <ContactSection data-reveal />
     </main>
 
+    <AssistantLauncher />
     <SiteFooter />
   </div>
 </template>
 
 <script setup>
-import { SiteFooter, SiteHeader } from '@/components/layout'
+import { AssistantLauncher, SiteFooter, SiteHeader } from '@/components/layout'
 import {
   AboutSection,
   CertificationsSection,
   ContactSection,
   ExperienceSection,
   HeroSection,
+  PortfolioAssistantSection,
+  TicketTriageSection,
   WorkSection
 } from '@/components/sections'
 import { useReveal } from '@/composables/useReveal'

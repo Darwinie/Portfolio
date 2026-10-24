@@ -23,6 +23,23 @@ test('portfolio is readable, responsive, and free of placeholder content', async
   expect(consoleErrors).toEqual([])
 })
 
+test('assistant launcher hides while the assistant section is in view and returns afterward', async ({ page }) => {
+  await page.goto('/')
+  const launcher = page.getByRole('link', { name: /Ask my AI assistant/i })
+
+  await expect(launcher).toBeVisible()
+
+  await page.locator('#assistant').evaluate((element) => element.scrollIntoView({ block: 'start' }))
+  await expect(launcher).toBeHidden()
+
+  await page.evaluate(() => window.scrollTo(0, 0))
+  await expect(launcher).toBeVisible()
+
+  await page.locator('#contact').scrollIntoViewIfNeeded()
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+  await expect(launcher).toBeVisible()
+})
+
 test('mobile menu opens and closes with Escape', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')

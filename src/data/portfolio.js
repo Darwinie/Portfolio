@@ -1,14 +1,14 @@
 export const portfolio = {
   profile: {
     name: 'Darwin M. Lubugan',
-    role: 'Software Engineer — Automation',
+    role: 'Software Engineer | .NET Full Stack Developer',
     location: 'Batangas, Philippines',
     timezone: 'GMT+8',
     email: 'lubugandarwin@gmail.com',
     phone: '+639280810360',
     availability: 'Open to software engineering and automation roles — Remote-friendly',
     headline: 'I turn repetitive work into reliable systems.',
-    intro: 'I build internal tools and automations for business operations — C#, .NET, Vue, PowerShell, Python, SQL. Currently keeping business systems running at Advani Group of Companies.',
+    intro: 'I build enterprise applications, internal tools, and automations — C#, ASP.NET Core, .NET, Vue, PHP, PowerShell, Python, SQL. Currently a part-time software developer at NOUS AV IT Solutions.',
     portraitAlt: 'Darwin M. Lubugan',
     resumeUrl: '/Lubugan_Darwin_Resume.pdf',
     links: [
@@ -20,7 +20,7 @@ export const portfolio = {
   metrics: [
     { value: '≈70%', label: 'Less repetitive work', detail: 'Approximate reduction across automation work' },
     { value: 'Weeks → < 1 hour', label: 'Catalog cleanup', detail: 'Manual reconciliation replaced by scripts' },
-    { value: 'Since 2023', label: 'Building internal tools', detail: 'Software engineering and automation roles' }
+    { value: '≈3 years', label: 'Professional software experience', detail: 'Software engineering since October 2023' }
   ],
   caseStudies: [
     {
@@ -80,15 +80,15 @@ export const portfolio = {
       stack: ['Python', 'Shopify API', 'Pillow']
     },
     {
-      title: 'Municipal Health Office information system',
-      description: 'Capstone project that digitized paper-based health records.',
+      title: 'Municipal Health Office information and record management system',
+      description: 'Capstone project that digitized paper-based health records and automated record-keeping.',
       stack: ['C#', '.NET', 'SQL Server']
     }
   ],
   about: {
     bio: [
       "I'm Darwin, a software engineer based in Batangas, Philippines. I build internal tools and automations for business operations — the kind of work that removes a manual step, a spreadsheet, or a licensing fee.",
-      "I've worked across the Microsoft stack, PHP/MySQL systems, and Shopify automation. At Advani Group of Companies, I build internal tools while supporting users, Active Directory access, Hyper-V and Proxmox environments, backups, and business applications."
+      "I've worked across the Microsoft stack, PHP/MySQL systems, and Shopify automation. At Advani Group of Companies, I built internal tools while supporting users, Active Directory access, Hyper-V and Proxmox environments, backups, and business applications. I'm now a part-time software developer at NOUS AV IT Solutions, building full-stack web applications and business systems."
     ],
     howIWork: [
       { number: '01', title: 'Observe the process', description: 'Watch how the work actually gets done, including the workarounds.' },
@@ -97,32 +97,60 @@ export const portfolio = {
       { number: '04', title: 'Measure and document it', description: 'Confirm the outcome and leave the team with a process they can run.' }
     ],
     toolbox: [
-      { group: 'Build', items: ['C#', '.NET', 'ASP.NET Core', 'Vue.js', 'PHP'] },
-      { group: 'Automate', items: ['PowerShell', 'Python', 'Shopify API', 'Azure OCR'] },
-      { group: 'Data', items: ['SQL Server', 'T-SQL', 'MySQL', 'MongoDB'] },
-      { group: 'Support', items: ['Windows / macOS', 'Active Directory', 'Hardware / software', 'End-user assistance'] },
+      {
+        group: 'Build',
+        items: ['C#', '.NET', 'ASP.NET Core', '.NET MVC', 'Entity Framework Core', 'Vue.js', 'JavaScript', 'TypeScript', 'PHP', 'Bootstrap']
+      },
+      {
+        group: 'Automate',
+        items: ['PowerShell', 'Python', 'Azure AI Document Intelligence', 'Tesseract OCR (C#)', 'Shopify API']
+      },
+      { group: 'Data', items: ['SQL Server', 'T-SQL', 'MySQL', 'MongoDB', 'PostgreSQL'] },
+      {
+        group: 'Cloud & DevOps',
+        items: ['Microsoft Azure', 'Azure Functions', 'Azure DevOps', 'CI/CD Pipelines', 'Docker', 'Apache HTTP Server']
+      },
+      {
+        group: 'Support',
+        items: ['Windows / macOS', 'Active Directory', 'Hardware / software', 'End-user assistance', 'Network & system troubleshooting']
+      },
       { group: 'Systems', items: ['Hyper-V', 'Proxmox', 'Linux', 'pfSense', 'DNS / DHCP / VPN'] },
-      { group: 'Operate', items: ['Dynamics 365 Business Central', 'SAP Business One', 'Azure DevOps', 'Git', 'CI/CD', 'Docker'] }
+      {
+        group: 'Operate',
+        items: ['Dynamics 365 Business Central', 'SAP Business One', 'Git (GitHub, Azure Repos)', 'Agile', 'REST API Development', 'Unit Testing']
+      }
     ],
     currently: [
-      { label: 'Role', value: 'Junior Network and System Administrator' },
-      { label: 'Company', value: 'Advani Group of Companies' },
-      { label: 'Focus', value: 'Automation, application support, and IT operations' },
+      { label: 'Role', value: 'Software Developer (Part-time)' },
+      { label: 'Company', value: 'NOUS AV IT Solutions' },
+      { label: 'Focus', value: 'Full-stack web applications and business systems' },
       { label: 'Education', value: 'BSIT, Cum Laude — STI College Balayan' }
     ]
   },
   experience: [
     {
+      role: 'Software Developer (Part-time)',
+      company: 'NOUS AV IT Solutions',
+      period: 'Mar 2026 — Present',
+      summary: 'Build full-stack web applications and business systems for clients, from requirements gathering through delivery.',
+      highlights: [
+        'Developed a travel agency website and booking management system with purchase order functionality.',
+        'Built a timekeeping and payroll system to automate attendance and payroll processing.',
+        'Developed full-stack web applications using PHP, MySQL, Apache, JavaScript, HTML, and CSS.',
+        'Gathered client requirements and translated business needs into software solutions.'
+      ]
+    },
+    {
       role: 'Junior Network and System Administrator',
       company: 'Advani Group of Companies (Nyne Beauty Inc.)',
-      period: 'Nov 2025 — Present',
-      summary: 'Build internal tools and automations while supporting users, infrastructure, and business-critical applications. Partner with teams to identify automation opportunities and reduce repetitive work.',
+      period: 'Nov 2025 — Sept 25, 2026',
+      summary: 'Built internal tools and automations while supporting users, infrastructure, and business-critical applications. Partnered with teams to identify automation opportunities and reduce repetitive work.',
       highlights: [
-        'Troubleshoot Windows / macOS, network, and system issues; provide hardware and software support, installation, and end-user assistance.',
-        'Administer Active Directory user access, maintain servers and Linux environments, and support Hyper-V and Proxmox virtualization.',
-        'Perform routine backups, maintain IT asset records, and support equipment inventory tracking.',
-        'Provide Dynamics 365 Business Central application support and track issues in Azure DevOps; built a C#/.NET ticketing system for internal requests.',
-        'Built a Python automation for pfSense backups and PowerShell/Python workflows for Shopify catalog alignment, deduplication, and barcode generation, reducing a multi-week process to under an hour.',
+        'Troubleshot Windows / macOS, network, and system issues; provided hardware and software support, installation, and end-user assistance.',
+        'Administered Active Directory user access, maintained servers and Linux environments, and supported Hyper-V and Proxmox virtualization.',
+        'Performed routine backups, maintained IT asset records, and supported equipment inventory tracking.',
+        'Provided Dynamics 365 Business Central application support and tracked issues in Azure DevOps; built a C#/.NET ticketing system for internal requests.',
+        'Built Python automation for pfSense backups and PowerShell/Python workflows for Shopify catalog alignment, deduplication, and barcode generation, reducing a multi-week process to under an hour.',
         'Built a PHP/MySQL timekeeping system that replaced a licensed tool, reducing manual processing and improving payroll accuracy.',
         'Used Whisper AI and Python to convert training transcripts into structured documentation.'
       ]
@@ -131,18 +159,19 @@ export const portfolio = {
       role: 'Software Engineer',
       company: 'Elyon Global Technologies Asia Inc.',
       period: 'Oct 2023 — Oct 2025',
-      summary: 'Built automation features and responsive web solutions for internal and client projects.',
+      summary: 'Built automation features and responsive web applications for internal and client projects.',
       highlights: [
-        'Integrated OCR for customer identification, reducing queue times and manual data entry.',
-        'Developed responsive landing pages and internal tools with Vue.js.',
-        'Created reusable components for consistent UI and faster delivery.'
+        'Developed a Money Exchange System that streamlined critical processes and improved operational efficiency for Czarina Forex Exchange.',
+        'Integrated OCR for customer identification, reducing queue times and eliminating manual data entry.',
+        'Delivered a scalable solution to handle high transaction volumes with real-time accuracy.',
+        'Built responsive web applications with Vue.js and reusable components, collaborating with cross-functional teams to deliver internal business solutions.'
       ]
     }
   ],
   education: {
     degree: 'BSIT, Cum Laude',
     school: 'STI College Balayan',
-    period: '2019 — 2023'
+    period: 'July 2019 — July 2023'
   },
   certifications: [
     { name: 'SAP Business One (Basic — Financials and Logistics)' },

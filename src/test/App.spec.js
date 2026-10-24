@@ -16,7 +16,10 @@ it('renders the new shell and removes the old sections', () => {
   expect(wrapper.find('#about').exists()).toBe(true)
   expect(wrapper.find('#experience').exists()).toBe(true)
   expect(wrapper.find('#certifications').exists()).toBe(true)
+  expect(wrapper.find('#triage').exists()).toBe(true)
+  expect(wrapper.find('#assistant').exists()).toBe(true)
   expect(wrapper.find('#contact').exists()).toBe(true)
+  expect(wrapper.get('.assistant-launcher').attributes('href')).toBe('#assistant')
 
   expect(wrapper.text()).not.toContain('Testimonials')
   expect(wrapper.text()).not.toContain('Skills & Technologies')
